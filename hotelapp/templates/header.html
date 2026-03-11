@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'bt/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'ex_style/style.css' %}">
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+
+<style>
+    .navbar-brand{
+       color:red;
+       font-size:xx-large;
+
+    }
+</style>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" ><b>KFC</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+         <a class="nav-link" href="/home">Home</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/menu">Menu</a>
+         <a class="nav-link" href="/order">Order</a>
+    </div>
+  </div>
+  </div>
+</nav>
+

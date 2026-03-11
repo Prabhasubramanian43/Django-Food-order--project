@@ -1,0 +1,132 @@
+{% load static %}
+{% include 'header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hotel</title>
+    <style>
+          body{
+             animation: fadeIn 1s ease-in-out;
+              background: linear-gradient(135deg, #fff5f0, #ffe0cc);
+        }
+         @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    #f{
+      width: 250px;
+      height:250px;
+      position: absolute;
+      bottom: 45px;
+      right: 50px;
+      top: 160px;
+      box-shadow: 2px 2px 5px tomato;
+    }
+    h4{
+        margin:10px;
+        padding:20px;
+        color:rgb(32, 42, 51);
+       }
+    h2{
+        margin:10px;
+        color:rgb(32, 42, 51);
+        color:white;
+        }
+    #a{
+        margin:20px;
+      background:rgba(239, 232, 232, 1);
+        }
+    .image-card{
+        display: flex;
+     justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+
+    }
+  .ima{
+      background:rgb(220, 215, 215);
+       color: black;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin:80px;
+    }
+    .ima:hover {
+      transform: scale(1.05);
+    }
+    .ima img {
+      width: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      height:150px;
+    }
+    .ima h3 {
+      margin: 10px 0;
+    }
+    .btn {
+    display: inline-block;
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-left:500px;
+}
+
+.btn:hover {
+    background-color: #ff5722;
+}
+
+
+    </style>
+</head>
+<body>
+
+<h1>
+    <center>Welcome To KFC</center>
+</h1><br>
+<div id="a">
+<h2>Journey of fried chicken</h2>
+    <h4>
+ It all started with Colonel Harland Sanders creating a finger lickin’ good <br>recipe more
+    than 75 years ago. A list of secret herbs and spices scratched <br> on the back of
+    his kitchen door, that continues to be followed across 145<br> countries, with more than
+    800,000 team members breading and freshly<br> preparing bucket after bucket of our
+    signature Hot & Crispy chicken. </h4><br>
+  <img id="f" src="{% static 'image/imagee.jpg' %}" alt="Fried Chicken">
+  </div>
+
+<div class="image-card">
+    <div class="ima">
+    <img  src="{% static 'image/download (1).jpeg' %}" alt="name">
+    <h3>FRIED CHICKEN</h3>
+    </div>
+    <div class="ima">
+    <img  src="{% static 'image/CAT86.jpg' %}" alt="name">
+    <h3>CHICKEN BUCKETS</h3>
+    </div>
+ <div class="ima">
+      <img  src="{% static 'image/download (6).jpeg' %}" alt="name">
+    <h3>  CHICKEN POPCORN</h3>
+    </div>
+     <div class="ima">
+    <img  src="{% static 'image/imagee.jpg' %}" alt="name">
+    <h3>BURGERS</h3>
+    </div>
+ <div class="ima">
+    <img src="{% static 'image/images (2).jpeg' %}" alt="name">
+    <h3>DRINKS</h3>
+    </div>
+     <div class="ima">
+    <img id="j" src="{% static 'image/images.jpeg' %}" alt="name">
+    <h3>DESSERTS</h3>
+    </div>
+</div>
+
+   <center> <a href="{% url 'menu' %}" class="btn">View Menu</a> </center>
+
+</body>
+</html>

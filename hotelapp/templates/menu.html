@@ -1,0 +1,128 @@
+{% load static %}
+{% include 'header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Menu</title>
+    <style>
+        body{
+             animation: fadeIn 1s ease-in-out;
+              background: linear-gradient(135deg, #fff5f0, #ffe0cc);
+        }
+         @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+         .image{
+        display: flex;
+     justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+
+    }
+  .photo{
+      background:rgb(220, 215, 215);
+       color: black;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin:80px;
+    }
+    .photo:hover {
+      transform: scale(1.05);
+    }
+    .photo img {
+      width: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+      height:150px;
+
+    }
+    .photo h3 {
+      margin: 10px 0;
+    }
+.btn{
+     background-color: red;
+    color: white;
+    border-radius: 30px;
+    }
+   .btn:hover {
+    background-color: brown;
+}
+    </style>
+</head>
+<body>
+<div class="image">
+    <div class="photo">
+    <img  src="{% static 'image/images (3) c.jpeg' %}" alt="name">
+    <h3>BIG 12</h3>
+     <P>6pc Hot & Crispy Chicken,6 Wings & 2 Dips(20gm each)</P>
+     <p><b>₹400</b></p>
+        <a  href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/download (8).jpeg' %}" alt="name">
+    <h3>All In one Bucket</h3>
+      <p>1 Leg, 1 Hot & Crispy, 2 Wings, 2 Strips, 1 Zinger Fillet, 3 Dips & Pepsi PET 475ml</p>
+     <p><b>₹700</b></p>
+          <a  href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+      <div class="photo">
+    <img  src="{% static 'image/download (9).jpeg' %}" alt="name">
+    <h3>Leg Piece</h3>
+     <p>5Leg Piece & Pepsi PET 475ml</p>
+     <p><b>₹500</b></p>
+      <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+
+     <div class="photo">
+    <img  src="{% static 'image/images (3)bbb.jpeg' %}" alt="name">
+    <h3>Gold Edition – Chicken Zinger & Fries</h3>
+      <p>Non veg
+         Enjoy New Cheesy Chicken Zinger & Reg Fries</p>
+     <p><b>₹200</b></p>
+      <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/images (3)bb.jpeg' %}" alt="name">
+    <h3>Tandoori Zinger Burger</h3>
+     <p>Enjoy New Cheesy Chicken Zinger</p>
+     <p><b>₹350</b></p>
+         <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/images (3)bu.jpeg' %}" alt="name">
+    <h3> Classic Burger</h3>
+     <p>A Box with your favorites </p>
+     <p><b>₹450</b></p>
+         <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/download (10)p.jpeg' %}" alt="name">
+    <h3> CHICKEN POPCORN</h3>
+         <P>Large Pack of Chicken Popcorn seasoned with the Chili Lime flavours</P>
+     <p><b>₹200</b></p>
+      <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/images (3)R.jpeg' %}" alt="name">
+    <h3>ROLL CHICKEN</h3>
+         <p>Crispy Chicken</p>
+     <p><b>₹250</b></p>
+     <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+     <div class="photo">
+    <img  src="{% static 'image/download (10)D.jpeg' %}" alt="name">
+    <h3> Double Stacker</h3>
+         <p>NEW DESSERT</p>
+     <p><b>₹150</b></p>
+      <a href="{% url 'order' %}" class="btn">Add Card</a>
+    </div>
+
+</div>
+
+</body>
+</html>
+
