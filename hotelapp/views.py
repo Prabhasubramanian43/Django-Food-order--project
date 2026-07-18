@@ -1,16 +1,15 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Menu
 
 def home(request):
-    return render (request,"home.html")
+    return render(request, "home.html")
 
 def about(request):
-    return render (request,"about.html")
+    return render(request, "about.html")
 
 def menu(request):
-    return render (request,"menu.html")
+    menus = Menu.objects.all()
+    return render(request, "menu.html", {"menus": menus})
 
 def order(request):
-    return render (request,"order.html")
-
+    return render(request, "order.html")
